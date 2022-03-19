@@ -37,6 +37,7 @@ public struct LineChartView: View {
                 title: String,
                 legend: String? = nil,
                 style: ChartStyle = Styles.lineChartStyleOne,
+                darkModeStyle: ChartStyle = Styles.lineViewDarkMode,
                 form: CGSize? = ChartForm.medium,
                 rateValue: Int?,
                 dropShadow: Bool? = true,
@@ -46,7 +47,7 @@ public struct LineChartView: View {
         self.title = title
         self.legend = legend
         self.style = style
-        self.darkModeStyle = style.darkModeStyle != nil ? style.darkModeStyle! : Styles.lineViewDarkMode
+        self.darkModeStyle = darkModeStyle
         self.formSize = form!
         frame = CGSize(width: self.formSize.width, height: self.formSize.height/2)
         self.dropShadow = dropShadow!
